@@ -1,4 +1,4 @@
-*LP Reward Allocation*
+# LP Reward Allocation
 
 This is a simple script to work out pool allocation of rewards.
 
