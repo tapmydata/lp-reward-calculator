@@ -22,10 +22,14 @@ Where trans.from = '0x54049236fc1db3e274128176efedf7c69b4c6335' and trans.to = '
 
 4. Adjust removals of tokens to - amounts:
 
+Note. 0x639e71d35d151ac4d0aafc7772354dae71ddc4f4 is our own LP account.
+
 ```sql
 update trans
 set quantity = quantity - (2*quantity)
 where trans.to = '0x54049236fc1db3e274128176efedf7c69b4c6335'
+or (trans.from != '0x0000000000000000000000000000000000000000' and not trans.to = '0x54049236fc1db3e274128176efedf7c69b4c6335')
+and not trans.from = '0x639e71d35d151ac4d0aafc7772354dae71ddc4f4'
 ```
 
 5. Update recipient details:
