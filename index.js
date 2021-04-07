@@ -9,12 +9,12 @@ var connection = mysql.createConnection({
 connection.connect();
 
 //CHANGE THIS: Reward devided by the number of hours and minutes in the period.
-var reward = 500000 / 744 / 60;
+var reward = 500000 / 720 / 60;
 
 //CHANGE THESE DATES:
-var date = new Date('Mar 1 2021 00:00:00 GMT+0000 (UTC)').getTime();
+var date = new Date('Apr 1 2021 00:00:00 GMT+0000 (UTC)').getTime();
 
-while(date < new Date('Apr 1 2021 00:00:00 GMT+0000 (UTC)')) {
+while(date < new Date('Apr 15 2021 00:00:00 GMT+0000 (UTC)')) {
 
     date += (60 * 1000);
 
